@@ -1,0 +1,5 @@
+package com.ryb.songflow.userinfo;
+
+public class AIDService extends Thread {
+
+}

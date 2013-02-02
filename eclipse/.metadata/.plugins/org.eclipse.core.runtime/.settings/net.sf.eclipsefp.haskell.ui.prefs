@@ -1,0 +1,4 @@
+BUILDWRAPPER_EXECUTABLE=C\:\\Program Files (x86)\\Haskell\\bin\\buildwrapper.exe
+SCION_BROWSER_HACKAGE_QUESTION_ANSWERED=true
+SCION_BROWSER_SERVER_EXECUTABLE=C\:\\Program Files (x86)\\Haskell\\bin\\scion-browser.exe
+eclipse.preferences.version=1

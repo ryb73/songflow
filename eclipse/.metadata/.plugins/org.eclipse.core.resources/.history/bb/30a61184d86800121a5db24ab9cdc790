@@ -1,0 +1,63 @@
+package com.ryb.songflow.search;
+
+import android.net.Uri;
+import android.os.Bundle;
+import android.app.ListActivity;
+import android.app.SearchManager;
+import android.content.Intent;
+import android.util.Log;
+import android.view.Menu;
+import android.widget.ArrayAdapter;
+
+import com.ryb.songflow.*;
+import com.ryb.songflow.spotify.Spotify;
+import com.ryb.songflow.userinfo.Preferences;
+
+public class SearchActivity extends ListActivity {
+	public static final String INTENT_ARTIST = "com.ryb.songflow.search.Artist";
+	public static final String INTENT_ALBUM = "com.ryb.songflow.search.Album";
+	public static final String INTENT_SONG = "com.ryb.songflow.search.Song";
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		
+		Intent intent = getIntent();
+		String action = intent.getAction();
+		if(Intent.ACTION_SEARCH.equals(action)) {
+			handleSearch(intent.getStringExtra(SearchManager.QUERY));
+		} else if(INTENT_ARTIST.equals(action)) {
+			handleArtist(intent.getData());
+		} else if(INTENT_ALBUM.equals(action)) {
+			handleAlbum(intent.getData());
+		} else if(INTENT_SONG.equals(action)) {
+			handleSong(intent.getData());
+		}
+	}
+
+	private void handleSong(Uri data) {
+	    Log.d("rbd","song: " + data);
+    }
+
+	private void handleAlbum(Uri data) {
+		Preferences.getInstance().addAlbum(data.toString(), null, null);
+		Log.d("rbd","album: " + data);
+    }
+
+	private void handleArtist(Uri data) {
+		Log.d("rbd","artist: " + data);
+    }
+
+	private void handleSearch(String query) {
+	    ResultListAdapter adapter = new ResultListAdapter(this);
+	    Spotify.search(query, adapter);
+	    this.getListView().setAdapter(adapter);
+    }
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.activity_search, menu);
+		return true;
+	}
+}

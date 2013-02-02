@@ -1,0 +1,23 @@
+1357514037899	Extract local variable 'intent'
+1357524807275	Rename type 'SpotifyInstance'
+1357524880661	Rename type 'SpotifyWrapper'
+1357524992981	Rename method 'connect'
+1357527560105	Move compilation unit
+1357527564598	Move compilation unit
+1357528309451	Rename type 'ResultsListAdapter'
+1357702253129	Move compilation unit
+1357702353472	Delete element
+1357788795067	Rename type 'SearchSuggestionCursor'
+1357788842824	Rename field 'suggestionsRecieved'
+1357791368096	Extract method 'handleSearch'
+1357792416156	Delete elements
+1357795496032	Rename local variable 'string'
+1357795504052	Rename local variable 'rfe'
+1357878809976	Rename local variable 'pref'
+1357880465748	Rename field 'bad'
+1357880470405	Rename field 'good'
+1357952598275	Move compilation unit
+1357952858634	Move compilation unit
+1357952867326	Move compilation unit
+1357952935720	Rename package 'com.ryb.songflow.preferences'
+1357957886351	Delete element

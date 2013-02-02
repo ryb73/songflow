@@ -1,0 +1,24 @@
+package com.ryb.songflow.search;
+
+public class SearchResult {
+	private String text;
+	private String uri;
+	private SearchResultType type;
+
+	public SearchResult(String text, String uri, SearchResultType type) {
+		this.text = text;
+		this.uri = uri;
+		this.type = type;
+	}
+	
+	@Override
+    public String toString() {
+	    return text;
+    }
+
+
+
+	public enum SearchResultType {
+		ARTIST, ALBUM, SONG
+    }
+}

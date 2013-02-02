@@ -1,0 +1,22 @@
+package com.ryb.songflow.userinfo;
+
+import java.util.LinkedList;
+
+public class AIDService extends Thread {
+	private Iterable<Album> updateQueue = new LinkedList<Album>();
+	private boolean running;
+	
+	@Override
+    public void run() {
+	    running = true;
+	    while(running) {
+	    	try {
+	    		wait();
+	    	} catch(InterruptedException ie) { }
+
+	    	for(Album a : updateQueue) {
+	    		
+	    	}
+	    }
+    }
+}

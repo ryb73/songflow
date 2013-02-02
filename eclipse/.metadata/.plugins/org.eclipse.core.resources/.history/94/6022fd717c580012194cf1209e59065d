@@ -1,0 +1,49 @@
+package com.ryb.songflow.search;
+
+import com.ryb.songflow.R;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+import android.widget.TextView.BufferType;
+
+public class ResultListAdapter extends BaseAdapter implements SearchListener {
+	private Context context;
+
+	public ResultListAdapter(Context c) {
+		context = c;
+	}
+
+	@Override
+	public int getCount() {
+		return 1;
+	}
+
+	@Override
+	public Object getItem(int position) {
+		return "hi";
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		TextView view = (TextView) inflater.inflate(R.layout.search_result, parent, false);
+		view.setText("sup", BufferType.NORMAL);
+		return view;
+	}
+
+	@Override
+    public void searchComplete(SearchResult[] results) {
+	    // TODO Auto-generated method stub
+	    
+    }
+
+}

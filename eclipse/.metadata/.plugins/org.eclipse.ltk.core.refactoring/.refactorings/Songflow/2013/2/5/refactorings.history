@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;Songflow&apos;&#x0A;- Original project: &apos;Songflow&apos;&#x0A;- Original elements:&#x0A;     rbm_item.xml&#x0A;     rbm_menu.xml" description="Delete elements" element1="res/layout/rbm_menu.xml" element2="res/layout/rbm_item.xml" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2" stamp="1359817120446" subPackages="false" version="1.0"/>
+</session>
