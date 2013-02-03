@@ -3,6 +3,8 @@ package com.ryb.songflow.userinfo;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import android.util.Log;
+
 public class AIDService extends Thread {
 	private Queue<Album> updateQueue = new LinkedList<Album>();
 	private boolean running;
@@ -16,16 +18,20 @@ public class AIDService extends Thread {
 	    running = true;
 	    while(running) {
 	    	for(Album a : updateQueue) {
-	    		a.updateInfo();
+	    		synchronized(a) {
+	    			a.updateInfo();
+	    		}
 	    	}
 	    	
 	    	try {
-	            wait();
+	    		synchronized(this) {
+	    			wait();
+	    		}
             } catch (InterruptedException ie) { }
 	    }
     }
 
-	public void enqueue(Album a) {
+	public synchronized void enqueue(Album a) {
 	    updateQueue.add(a);
 	    try {
 	    	if(!isAlive()) start();

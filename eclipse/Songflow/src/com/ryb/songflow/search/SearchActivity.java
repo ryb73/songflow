@@ -10,10 +10,14 @@ import android.view.Menu;
 import android.widget.ArrayAdapter;
 
 import com.ryb.songflow.*;
+import com.ryb.songflow.spotify.MetadataUpdate;
+import com.ryb.songflow.spotify.MetadataUpdate.UpdateType;
+import com.ryb.songflow.spotify.MetadataUpdateListener;
+import com.ryb.songflow.spotify.SongInfoUpdate;
 import com.ryb.songflow.spotify.Spotify;
 import com.ryb.songflow.userinfo.Preferences;
 
-public class SearchActivity extends ListActivity {
+public class SearchActivity extends ListActivity implements MetadataUpdateListener {
 	public static final String INTENT_ARTIST = "com.ryb.songflow.search.Artist";
 	public static final String INTENT_ALBUM = "com.ryb.songflow.search.Album";
 	public static final String INTENT_SONG = "com.ryb.songflow.search.Song";
@@ -36,12 +40,13 @@ public class SearchActivity extends ListActivity {
 	}
 
 	private void handleSong(Uri data) {
-	    Log.d("rbd","song: " + data);
+	    Spotify.getSongInfo(data.toString(), this);
+	    finish();
     }
 
 	private void handleAlbum(Uri data) {
-		Preferences.getInstance().addAlbum(data.toString(), null, null);
-		Log.d("rbd","album: " + data);
+		Preferences.getInstance().addAlbum(data.toString());
+		finish();
     }
 
 	private void handleArtist(Uri data) {
@@ -51,6 +56,13 @@ public class SearchActivity extends ListActivity {
 	private void handleSearch(String query) {
 	    ResultListAdapter adapter = new ResultListAdapter(this);
 	    Spotify.search(query, adapter);
-	    this.getListView().setAdapter(adapter);
+	    getListView().setAdapter(adapter);
+    }
+
+	@Override
+    public void metadataUpdated(MetadataUpdate update) {
+	    if(update.getUpdateType() == UpdateType.SONG_INFO) {
+	    	Preferences.getInstance().addAlbum(((SongInfoUpdate)update).getAlbumUri());
+	    }
     }
 }

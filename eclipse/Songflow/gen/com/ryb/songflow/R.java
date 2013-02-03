@@ -13,11 +13,42 @@ public final class R {
         public static final int rbm_out_to_left=0x7f040001;
     }
     public static final class attr {
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int exampleColor=0x7f010002;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int exampleDimension=0x7f010001;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int exampleDrawable=0x7f010003;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int exampleString=0x7f010000;
     }
     public static final class color {
-        public static final int background_color=0x7f060002;
-        public static final int rbm_item_text_color=0x7f060001;
-        public static final int rbm_menu_background=0x7f060000;
+        public static final int background_color=0x7f060000;
     }
     public static final class dimen {
         public static final int rbm_item_image_height=0x7f070003;
@@ -29,25 +60,33 @@ public final class R {
         public static final int rbm_menu_width=0x7f070000;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int logo=0x7f020001;
-        public static final int next_button=0x7f020002;
-        public static final int pause_button=0x7f020003;
-        public static final int play_button=0x7f020004;
-        public static final int prev_button=0x7f020005;
+        public static final int checkmark_34x34=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int logo=0x7f020002;
+        public static final int next_button=0x7f020003;
+        public static final int pause_button=0x7f020004;
+        public static final int play_button=0x7f020005;
+        public static final int prev_button=0x7f020006;
+        public static final int question_80x80=0x7f020007;
+        public static final int xmark_34x34=0x7f020008;
     }
     public static final class id {
+        public static final int artist=0x7f0b0005;
         public static final int button1=0x7f0b0002;
+        public static final int checkmark=0x7f0b0006;
+        public static final int cover=0x7f0b0003;
         public static final int logo=0x7f0b0001;
-        public static final int menu_list=0x7f0b0003;
-        public static final int menu_prefs=0x7f0b0004;
-        public static final int menu_settings=0x7f0b0005;
+        public static final int menu_list=0x7f0b0008;
+        public static final int menu_prefs=0x7f0b0009;
+        public static final int menu_settings=0x7f0b000a;
+        public static final int name=0x7f0b0004;
         public static final int playButton=0x7f0b0000;
+        public static final int xmark=0x7f0b0007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int activity_my_list=0x7f030001;
-        public static final int activity_search=0x7f030002;
+        public static final int album_list_item=0x7f030002;
         public static final int search_result=0x7f030003;
     }
     public static final class menu {
@@ -84,4 +123,82 @@ public final class R {
     public static final class xml {
         public static final int searchable=0x7f050000;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a AlbumView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #AlbumView_exampleColor com.ryb.songflow:exampleColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlbumView_exampleDimension com.ryb.songflow:exampleDimension}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlbumView_exampleDrawable com.ryb.songflow:exampleDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlbumView_exampleString com.ryb.songflow:exampleString}</code></td><td></td></tr>
+           </table>
+           @see #AlbumView_exampleColor
+           @see #AlbumView_exampleDimension
+           @see #AlbumView_exampleDrawable
+           @see #AlbumView_exampleString
+         */
+        public static final int[] AlbumView = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.ryb.songflow.R.attr#exampleColor}
+          attribute's value can be found in the {@link #AlbumView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:exampleColor
+        */
+        public static final int AlbumView_exampleColor = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.ryb.songflow.R.attr#exampleDimension}
+          attribute's value can be found in the {@link #AlbumView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:exampleDimension
+        */
+        public static final int AlbumView_exampleDimension = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.ryb.songflow.R.attr#exampleDrawable}
+          attribute's value can be found in the {@link #AlbumView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name android:exampleDrawable
+        */
+        public static final int AlbumView_exampleDrawable = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.ryb.songflow.R.attr#exampleString}
+          attribute's value can be found in the {@link #AlbumView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:exampleString
+        */
+        public static final int AlbumView_exampleString = 0;
+    };
 }

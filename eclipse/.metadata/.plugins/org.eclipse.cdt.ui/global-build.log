@@ -5828,3 +5828,120 @@ Invalid attribute name:
 /home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
 
 **** Build Finished ****
+
+**** Build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 clean 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 clean 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 clean 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 clean 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 clean 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 clean 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 clean 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 clean 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****
+
+**** Build of configuration Default for project Test ****
+
+/home/ryan/android-ndk-r8d/ndk-build NDK_DEBUG=1 all 
+Invalid attribute name: 
+    package
+/home/ryan/android-ndk-r8d/build/gmsl/__gmsl:512: *** non-numeric second argument to `wordlist' function: ''.  Stop.
+
+**** Build Finished ****

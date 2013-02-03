@@ -1,1 +1,17 @@
 1359817120446	Delete elements
+1359820812502	Delete element
+1359821181530	Move compilation unit
+1359821677381	Rename local variable 'i'
+1359821682382	Rename local variable 'posi'
+1359821687900	Rename local variable 'position'
+1359822033801	Delete element
+1359822065021	Delete element
+1359827567867	Delete element
+1359829110996	Rename resource 'noAlbum_80x80.png'
+1359829156769	Delete element
+1359840734428	Rename local variable 'rl'
+1359841308769	Extract local variable 'name'
+1359841316401	Extract local variable 'artist'
+1359841377744	Extract constant 'NOT_YET_LOADED'
+1359844748530	Move compilation unit
+1359845326572	Rename local variable 'string'

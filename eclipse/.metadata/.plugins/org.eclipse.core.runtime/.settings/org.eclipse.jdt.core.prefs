@@ -298,4 +298,4 @@ org.eclipse.jdt.core.formatter.wrap_before_binary_operator=true
 org.eclipse.jdt.core.formatter.wrap_before_or_operator_multicatch=true
 org.eclipse.jdt.core.formatter.wrap_outer_expressions_when_nested=true
 org.eclipse.jdt.core.timeoutForParameterNameFromAttachedJavadoc=50
-org.eclipse.jdt.core.userLibrary.Joda-Time=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/home/ryan/prog/joda-time-2.1/joda-time-2.1.jar">\n\t\t<attributes>\n\t\t\t<attribute name\="javadoc_location" value\="jar\:file\:/home/ryan/prog/joda-time-2.1/joda-time-2.1-javadoc.jar\!/"/>\n\t\t</attributes>\n\t</archive>\n</userlibrary>\n
+org.eclipse.jdt.core.userLibrary.Joda-Time=<?xml version\="1.0" encoding\="UTF-8"?>\n<userlibrary systemlibrary\="false" version\="2">\n\t<archive path\="/home/ryan/prog/joda-time-2.1/joda-time-2.1.jar" sourceattachment\="/home/ryan/prog/joda-time-2.1/joda-time-2.1-sources.jar">\n\t\t<attributes>\n\t\t\t<attribute name\="javadoc_location" value\="jar\:file\:/home/ryan/prog/joda-time-2.1/joda-time-2.1-javadoc.jar\!/"/>\n\t\t</attributes>\n\t</archive>\n</userlibrary>\n

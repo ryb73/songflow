@@ -6,6 +6,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
+import com.ryb.songflow.mylist.MyListActivity;
 import com.ryb.songflow.search.SearchActivity;
 import com.ryb.songflow.spotify.SpotifyException;
 import com.ryb.songflow.spotify.Spotify;
@@ -16,6 +17,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends Activity {
@@ -23,6 +25,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		Log.d("rbd","main load");
 
 		try {
 			Preferences.loadPreferences(this);
@@ -60,4 +63,17 @@ public class MainActivity extends Activity {
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
+
+	@Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+	    switch(item.getItemId()) {
+	    	case R.id.menu_list:
+	    		Intent intent = new Intent(this, MyListActivity.class);
+	    		startActivity(intent);
+	    		return true;
+	    	default:
+	    		Log.wtf("rbd", "unhandled menu item " + item.getItemId());
+	    		return false;
+	    }
+    }
 }

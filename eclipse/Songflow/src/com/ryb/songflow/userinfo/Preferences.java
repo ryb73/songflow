@@ -3,6 +3,8 @@ package com.ryb.songflow.userinfo;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -32,16 +34,22 @@ public class Preferences {
 		return instance;
 	}
 	
-	public void addAlbum(String uri, String name, String artist) {
-		Album a = new Album(uri, name, artist);
+	public void addAlbum(String uri) {
+		Album a = new Album(uri);
 		albums.add(a);
 
 		if(aidService == null) {
 			aidService = new AIDService();
 		}
 
-		aidService.enqueue(a);
-		aidService.notifyAll();
+		synchronized (aidService) {
+			aidService.enqueue(a);
+			aidService.notifyAll();
+		}
+	}
+	
+	public List<Album> getAlbums() {
+		return Collections.unmodifiableList(albums);
 	}
 
 	public static Preferences loadPreferences(Context context) throws IOException, ParserConfigurationException, SAXException {
@@ -49,9 +57,11 @@ public class Preferences {
 			Log.w("rbd", "Requesting preferences multiple times");
 			return instance;
 		}
+		
+		instance = new Preferences();
 
 		if(!context.getFileStreamPath(FILE_NAME).exists()) {
-			return new Preferences();
+			return instance;
 		}
 
 		InputStream is = context.openFileInput(FILE_NAME);
@@ -66,8 +76,6 @@ public class Preferences {
 		if(!root.getNodeName().equals("preferences")) {
 			throw new IOException("Root node must be of type \"preferences\"");
 		}
-
-		instance = new Preferences();
 
 		NodeList nodes = root.getChildNodes();
 		for(int i = 0; i < nodes.getLength(); ++i) {

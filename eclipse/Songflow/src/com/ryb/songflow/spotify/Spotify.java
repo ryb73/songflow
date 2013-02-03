@@ -26,8 +26,7 @@ public class Spotify {
 		listener.searchComplete(res);
 	}
 
-	public static void getSuggestions(String query,
-            SearchListener listener) {
+	public static void getSuggestions(String query, SearchListener listener) {
 		//nSuggestions(query, 0, 3, 0, 3, 0, 3, listener);
 		SearchResult[] res = new SearchResult[4];
 		res[0] = new SearchResult("The Photo Album by Death Cab for Cutie", "photo", SearchResultType.ALBUM);
@@ -37,9 +36,17 @@ public class Spotify {
 		listener.searchComplete(res);
     }
 
-//	private static native String nInit();
-//	private static native void nSearch(String query, int trackOffest, int trackNum, int albumOffset, int albumCount,
+	public static void getSongInfo(String uri, MetadataUpdateListener listener) {
+	    if(uri.equals("city")) {
+	    	SongInfoUpdate update = new SongInfoUpdate("dreaming");
+	    	listener.metadataUpdated(update);
+	    }
+    }
+
+//	private static native String initialize();
+//	private static native void search(String query, int trackOffest, int trackNum, int albumOffset, int albumCount,
 //									   int artistOffset, int artistCount, SearchListener listener);
-//	private static native void nSuggestions(String query, int trackOffest, int trackNum, int albumOffset, int albumCount,
+//	private static native void getSuggestions(String query, int trackOffest, int trackNum, int albumOffset, int albumCount,
 //			   int artistOffset, int artistCount, SearchListener listener);
+//	private static native getSongInfo(String uri, MetadataUpdateListener listener);
 }

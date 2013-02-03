@@ -5,12 +5,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.joda.time.Instant;
-import org.joda.time.ReadableInstant;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
 
 import android.graphics.Bitmap;
 import android.util.Log;
@@ -22,7 +19,19 @@ public class Album {
 	private Rating rating = Rating.NONE;
 
 	private boolean spinsLoaded = true;
-	private Collection<ReadableInstant> spins;
+//	private Collection<ReadableInstant> spins;
+
+	public String getArtist() {
+		return artist;
+	}
+
+	public Rating getRating() {
+		return rating;
+	}
+
+	public Bitmap getCover() {
+		return cover;
+	}
 
 	private Bitmap cover;
 
@@ -32,6 +41,11 @@ public class Album {
 		this.uri = uri;
 		this.name = name;
 		this.artist = artist;
+		Log.d("rbd","new album: "+uri);
+	}
+	
+	Album(String uri) {
+		this(uri, null, null);
 	}
 
 	public static Album parse(Element element) throws IOException {
@@ -65,7 +79,7 @@ public class Album {
 					try {
 						rawInstant = Long.parseLong(((Element)n).getAttribute("instant"));
 						
-						res.spins.add(new Instant(rawInstant));
+//						res.spins.add(new Instant(rawInstant));
 					} catch(NumberFormatException nfe) {
 						Log.w("rbd", "Unable to load spin instant for album '" + name + "'");
 						res.spinsLoaded = false;
@@ -95,7 +109,17 @@ public class Album {
 
 	public void updateInfo() {
 	    if(uri.equals("news")) {
-	    	name = "good news everyone";
+	    	name = "Good News for People";
+	    	artist = "Modest Mouse";
+	    } else if(uri.equals("dreaming")) {
+	    	name = "Hurry Up, We're Dreaming";
+	    	artist = "M83";
 	    }
+	    
+	    Log.d("rbd","updating info: " + uri);
+    }
+
+	public String getName() {
+		return name;
     }
 }

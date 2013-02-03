@@ -46,7 +46,7 @@
         </provider>
 
         <activity
-            android:name="com.ryb.songflow.MyListActivity"
+            android:name="com.ryb.songflow.mylist.MyListActivity"
             android:label="@string/title_activity_my_list" >
         </activity>
     </application>
